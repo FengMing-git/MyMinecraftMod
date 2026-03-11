@@ -42,11 +42,11 @@ displayName="${mod_name}" #mandatory
 #credits="" #optional
 
 # The authors of the mod, displayed in the mod UI (optional)
-#authors=""
+authors="凤冥"
 
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-Example mod description.
+我的第一个mod。\n模组之旅，由此开始
 '''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
