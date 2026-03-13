@@ -1,5 +1,6 @@
 package net.fengming.myfirstmod;
 
+import net.fengming.myfirstmod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -43,6 +44,12 @@ public class MyFirstMod {
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public MyFirstMod(IEventBus modEventBus, ModContainer modContainer)
     {
+        modEventBus.addListener(this::commonSetup);
+        NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
+
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(FMLCommonSetupEvent event)
@@ -52,6 +59,10 @@ public class MyFirstMod {
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
+        {
+            event.accept(ModItems.BISMUTH);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
