@@ -1,5 +1,6 @@
 package net.fengming.myfirstmod;
 
+import net.fengming.myfirstmod.block.ModBlocks;
 import net.fengming.myfirstmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -48,6 +49,7 @@ public class MyFirstMod {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
     }
@@ -62,6 +64,12 @@ public class MyFirstMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
             event.accept(ModItems.BISMUTH);
+            event.accept(ModItems.BISMUTH_INGOT);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.BISMUTH_BLOCK);
         }
     }
 

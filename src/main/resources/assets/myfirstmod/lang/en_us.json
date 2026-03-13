@@ -1,3 +1,5 @@
 {
-    "item.myforstmod.bismuth": "Bismuth"
+    "item.myforstmod.raw_bismuth": "Raw Bismuth",
+    "item.myforstmod.bismuth_ingot": "Bismuth Ingot",
+    "block.myfirstmod.bismouth_block": "Bismuth Block"
 }

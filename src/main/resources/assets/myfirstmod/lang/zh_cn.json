@@ -1,3 +1,5 @@
 {
-  "item.myfirstmod.bismuth": "铋"
+  "item.myfirstmod.raw_bismuth": "粗铋",
+  "item.myfirstmod.bismuth_ingot": "铋锭",
+  "block.myfirstmod.bismuth_block": "铋块"
 }
